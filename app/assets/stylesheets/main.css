@@ -1,0 +1,41 @@
+body {background-image: url('gplaypattern.png'); font-family: ProximaNova, sans-serif; font-size: .9em; font-weight: 100 !important; }
+a { color: #48B0E7; text-decoration: none; font-family: ProximaNova, sans-serif; }
+a:hover { text-decoration: underline;}
+h1 { font-family: ProximaNovaReg, sans-serif; color:#666666; font-weight: 300 !important; font-size:1.6em; }
+p { font-family: ProximaNova, sans-serif; font-size: 1.1em; font-weight: 100 !important; }
+label { position: relative; top: -3px; }
+
+/*TABLE*/
+table { width:100%;}
+thead {font-family: ProximaNovaReg, sans-serif; font-weight: 900 !important; font-size:1.3em; }
+tbody {font-family: ProximaNova, sans-serif; color:#666666;  font-size: 1em; font-weight: 100 !important; }
+tbody tr td { border-bottom: 1px dotted #666666; margin-top: 2px;}
+td span { font-family: ProximaNova, sans-serif; font-size: 1em; color:#333333; }
+td {  font-family: ProximaNova, sans-serif; font-size: .9em; font-weight: 100 !important; }
+/*END*/
+
+.container {position: relative; width:760px; margin:30px auto; background: white; padding: 20px 20px;}
+
+.red { font-family: ProximaNova, sans-serif; font-size: 1em; color:red; font-weight: 100 !important; }
+.green { font-family: ProximaNova, sans-serif; font-size: 1em; color:green; font-weight: 100 !important; }
+.link { font-family: ProximaNova, sans-serif; font-size: .8em; font-weight: 100 !important; }
+.name { font-family: ProximaNova, sans-serif; font-size: 1.3em; color:#666666;font-weight: 300 !important; }
+.sms { background: none repeat scroll 0 0 #FF808D; color: white; font-weight: 700 !important;  margin: 10px 0; padding: 1px 3px;}
+.copy { color:#eaeaea; margin-top: 10px;}
+
+
+/*CONTAINER ERROR*/
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/*END*/
+
+/*BUTTON*/
+.submit { color: #48B0E7; background:none!important; border:none;  padding:0!important;  margin-top: 2px; cursor: pointer; font-family: ProximaNova, sans-serif; font-size: 1em; }
+.submit:hover { color: #48B0E7; background:none!important; border:none; padding:0!important; border-bottom:1px solid #48B0E7; margin-top: 1px; cursor: pointer; font-family: ProximaNova, sans-serif; font-size: 1em; } 
+/*END*/

@@ -1,0 +1,14 @@
+<h1>ОБНОВЛЕНИЕ ПАРОЛЯ</h1>
+<div>
+<%= form_for(@user) do |f| %>
+<div class='field'>
+  <%= f.label 'Пароль' %><br />
+  <%= f.password_field :password %>
+</div>
+<div class='field'>
+  <%= f.label "Подтвердите пароль" %><br />
+  <%= f.password_field :password_confirmation  %>
+</div>
+<%= f.submit "Сохранить" %>
+<% end %>
+</div>

@@ -1,0 +1,18 @@
+<% if signed_in? %>
+<a href='<%= signout_path %>'>ВЫЙТИ</a>
+<div style='margin:10px 0px;'>
+<h1>ПРОФИЛЬ</h1>
+<% @user = current_user %>
+<span><%= @user.name %></span> | 
+<% if current_user.invitation_limit > 0 %>
+<%= link_to "ПРИГЛАСИТЬ", new_invitation_path  %> (<%= current_user.invitation_limit %> шт) |
+<% end %>
+<span class='sms'>SMS <%= @user.count_sms %></span> |
+<%= link_to "ПОДПИСКИ", user_path(@user),  :class => "link" %> |
+<%= link_to "РЕДАКТИРОВАТЬ", edit_user_path(@user), :class => "link" %> | 
+<%= link_to "ЖУРНАЛ", user_logs_path(@user), :class => "link" %>
+<% if current_user.admin? %>
+| <%= link_to "УПРАВЛЕНИЕ", users_path, :class => "link" %>
+<% end %>
+</div>
+<% end %>

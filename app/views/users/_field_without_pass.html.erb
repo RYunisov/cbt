@@ -1,0 +1,23 @@
+<div class='field'>
+  <%= f.label 'Ваше имя'  %><br />
+  <%= f.text_field :name %>
+</div>
+<div class='field'>
+  <%= f.label :email %><br />
+  <%= f.text_field :mail %>
+</div>
+<div class='field'>
+  <%= f.label "Телефон" %><br />
+  <%= f.text_field :phone  %>
+</div>
+<% if current_user.admin? %>
+	<div class='field'>
+	  <%= f.label "КОЛ-ВО СМС" %><br />
+	  <%= f.text_field :count_sms  %>
+	</div>
+<% end %>
+<div class='field'>
+  <%= f.label "Дополнительно" %><br />
+  <%= f.text_field :comment  %>
+</div>
+<%= link_to "СМЕНИТЬ ПАРОЛЬ", pass_edit_path(@user), :class => 'link' %>

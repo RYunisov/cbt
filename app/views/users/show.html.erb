@@ -1,0 +1,19 @@
+<h1>ПОДПИСКИ</h1>
+<div style='margin: 10px auto;'>
+<%= radio_button_tag "method", "1", true, :class => "bmethod" %><span><%= @user.mail %></span>
+<%= radio_button_tag "method", "2", false,  :class => "bmethod" %><span><%= @user.phone %></span>
+</div>
+<table>
+<% @future.each do |f| %>
+ <tr>
+  <td class='name'><%= f.alias %></td>
+  <td>
+    <% if @user.following?(f.id).empty? %>
+        <%= render :partial => "subscribers/follow", :locals => { :ftr => f }  %>
+    <% else %>
+        <%= render :partial => "subscribers/unfollow", :locals => { :ftr => f } %>
+    <% end %>
+  </td>
+</tr>
+<% end %>
+</table>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  valuenew: 1.5
+  valueold: 1.5
+
+two:
+  name: MyString
+  valuenew: 1.5
+  valueold: 1.5

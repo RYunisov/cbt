@@ -1,0 +1,1 @@
+/home/unisov/Code/Ruby&ROR/Ruby/My/GetAllFutures.rb

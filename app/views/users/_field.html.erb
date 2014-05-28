@@ -1,0 +1,26 @@
+<%= render 'shared/error_messages', :object => f.object %>
+<%= f.hidden_field :invitation_token %>
+<div class='field'>
+  <%= f.label 'Ваше имя'  %><br />
+  <%= f.text_field :name %>
+</div>
+<div class='field'>
+  <%= f.label :email %><br />
+  <%= f.text_field :mail %>
+</div>
+<div class='field'>
+  <%= f.label "Телефон" %><br />
+  <%= f.text_field :phone  %>
+</div>
+<div class='field'>
+  <%= f.label 'Пароль' %><br />
+  <%= f.password_field :password %>
+</div>
+<div class='field'>
+  <%= f.label "Подтвердите пароль" %><br />
+  <%= f.password_field :password_confirmation  %>
+</div>
+<div class='field'>
+  <%= f.label "Дополнительно" %><br />
+  <%= f.text_field :comment  %>
+</div>

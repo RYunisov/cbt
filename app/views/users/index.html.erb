@@ -1,0 +1,28 @@
+<h1>УПРАВЛЕНИЕ</h1>
+<%= link_to 'НОВЫЙ ПОЛЬЗОВАТЕЛЬ', signup_path %>
+<table>
+<thead>
+	<tr>
+		<td>ИМЯ</td>
+		<td>EMAIL</td>
+		<td>ТЕЛЕФОН</td>
+		<td>АДМИН?</td>
+		<td>SMS</td>
+		<td>ПРОСМОТР</td>
+		<td>ДЕЙСТВИЯ</td>
+	</tr>
+</thead>	
+<tbody>
+<% @users.each do |u| %>
+	<tr>
+		<td><%= u.name %></td>
+		<td><%= u.mail %></td>
+		<td><%= u.phone %></td>
+		<td><%= u.admin? %></td>
+		<td><%= u.count_sms %></td>
+		<td><%= link_to 'ЖУРНАЛ', user_logs_path(u.id) %></td>
+		<td><%= link_to 'РЕДАКТИРОВАТЬ', edit_user_path(u.id) %><br /><%= link_to 'УДАЛИТЬ', user_path(u.id) %></td>
+	</tr>	
+<% end %>
+</tbody>
+</table>

@@ -1,0 +1,15 @@
+<%= form_for current_user.subscribers.build(:user_id => @user.id) do |f| %>
+ <div>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :future_id, :value => future_id %>
+ </div>
+ <div style='float:left;'>
+  <%= f.radio_button :time_id, '1' %><label>15min</label>
+  <%= f.radio_button :time_id, '2' %><label>30min</label>
+  <%= f.radio_button :time_id, '3' %><label>45min</label>
+  <%= f.radio_button :time_id, '4' %><label>60min</label>
+ </div>  
+ <div style='float:right; margin: 0px 10px;' class="actions">
+  <%= f.submit "ПОДПИСАТЬ", :class=>'submit' %>
+ </div>
+<% end %>

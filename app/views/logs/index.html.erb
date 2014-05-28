@@ -1,0 +1,26 @@
+<h1>ЖУРНАЛ<%= ' | '+@user.name unless current_user?(@user)%></h1>
+<table>
+<thead>
+	<tr>
+		<td>МЕТОД</td>
+		<td>ТЕКСТ</td>
+		<td>СТАТУС</td>
+		<td>ДАТА</td>
+	</tr>
+</thead>	
+<tbody>
+<% @log.each do |l| %>
+	<% text = l.text.split(',') %>
+	<tr>
+		<td><%= view_method(l.method_id) %></td>
+		<td><%= l.text.split(';')[1] %></td>
+		<% if text[0].to_s.match('error') %>
+		<td>ERROR</td>
+		<% else %>
+		<td><%= view_status(l.status) %></td>
+		<% end %>
+		<td><%= l.created_at %></td>
+	</tr>	
+<% end %>
+</tbody>
+</table>

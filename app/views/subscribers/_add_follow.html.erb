@@ -1,0 +1,22 @@
+<tr><td>
+		<div class="onoffswitch " style="float:right">
+		    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox <%= ftr.id %>" id="myonoffswitch <%= ftr.id %>">
+		    <label class="onoffswitch-label <%= ftr.id %>" for="myonoffswitch <%= ftr.id %>">
+			    <div class="onoffswitch-inner"></div>
+		    	<div class="onoffswitch-switch"></div>
+		    </label>
+		</div>
+</td>
+  <td class='name'><%= ftr.alias %></td>
+  <td>
+		<div>
+			<%= f.hidden_field :future_id, :value => ftr.id %>
+		</div>
+		<div style='float:left;'>
+			<%= f.radio_button :time_id, '1' %><label>15min</label>
+			<%= f.radio_button :time_id, '2' %><label>30min</label>
+			<%= f.radio_button :time_id, '3' %><label>45min</label>
+			<%= f.radio_button :time_id, '4' %><label>60min</label>
+		</div>
+
+		

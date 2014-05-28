@@ -1,0 +1,5 @@
+<% if subscriber_user?(current_user) && ( subscriber_user?(current_user) == 0 ) %>
+  <%= f.hidden_field :status, :value => "1" %>
+<% else %>
+  <%= f.hidden_field :status, :value => "0" %>
+<% end %>

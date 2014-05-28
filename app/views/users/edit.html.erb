@@ -1,0 +1,8 @@
+<h1>Редактирование пользователя</h1>
+<span class='red'>Телефон указывать без "8".</span><br>
+<%= form_for(@user) do |f| %>
+<%= render 'field_without_pass', :f => f %>
+<div class='action'>
+ <%= f.submit "Обновить" %>
+</div>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>РЕГИСТРАЦИЯ НОВОГО ПОЛЬЗОВАТЕЛЯ</h1>
+<%= form_for(@user) do |f| %>
+<%= render 'field_new', :f => f %>
+<div class='action'>
+ <%= f.submit "Создать пользователя" %>
+</div>
+<% end %>

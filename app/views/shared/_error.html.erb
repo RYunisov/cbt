@@ -1,0 +1,6 @@
+<% if flash[:error] %>
+	<center><span class="red" style='text-align:center;'><%= flash[:error] %></span></center>
+<% end %>
+<% if flash[:notice]%>
+	<center><span class="green" style='text-align:center;'><%= flash[:notice] %></span></center>
+<% end %>	
